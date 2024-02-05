@@ -1,9 +1,10 @@
 # Sorttaus-ohjelma
-Scripti minkä avulla saan sortattua tiedoston päätteitten perusteella (KESKEN)
+Scripti minkä avulla saan sortattua tiedostot kansiosta päätteitten perusteella 
 
-Miten aloitin
-Aluksi halusin tehdä tiedoston ohjelman joka lajittelee tiedostot päätteensä perusteella oikeisiin tiedostoihin
+# Mitä ohjelmat tekee
+Kopioiva_sorttaus ohjelma niin ensin kopioi ne ja siirtää kopioidut tiedostot kansioihin päätteitten perusteella
+Lajitteleva sorttaus siirtää tieedostot kansioihin päätteeitten perusteilla 
 
-1. Alotin etsimällä kaikki mahdolliset tiedosto päätteet, tein json tiedoston sisältäen kaikki tiedosto päätteet
-2. Selvitin miten saada json pythooniin
-3. Yritin saada selville monta tiedostoa tyyppiä on tiedostossa
+- Creditit
+Rasmus Nurro (Ohjelmoija ja suunnittelija)
+ChatGPT:teetä käytetty avuksi tarpeitten mukaan
