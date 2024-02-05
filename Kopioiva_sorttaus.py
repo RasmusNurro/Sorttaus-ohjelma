@@ -1,5 +1,7 @@
 import os
 import shutil
+import tkinter as tk
+from tkinter import filedialog
 
 def organize_files():
     # Saadaan selville mistä otetaan tiedostot
@@ -58,5 +60,38 @@ def organize_files():
 
         print(f"Moved {filename} to {kansio}")
 
-# Aloita organisaatioprosessi funktio toiminnolla
-organize_files()
+
+def browse_source():
+    lahde_kansio = filedialog.askdirectory()
+    source_var.set(lahde_kansio)
+
+def browse_target():
+    kohde_kansio = filedialog.askdirectory()
+    target_var.set(kohde_kansio)
+
+def sort_files():
+    lahde_kansio = source_var.get()
+    kohde_kansio = target_var.get()
+    organize_files(lahde_kansio, kohde_kansio)
+
+# Luodaan pää ikkuna
+root = tk.Tk()
+root.title("File Sorter")
+
+# Variabelit tallettakseen lahde ja kohde kansiot
+source_var = tk.StringVar()
+target_var = tk.StringVar()
+
+# UI komponentit
+tk.Label(root, text="Source Directory:").grid(row=0, column=0, padx=10, pady=10)
+tk.Entry(root, textvariable=source_var).grid(row=0, column=1, padx=10, pady=10)
+tk.Button(root, text="Browse", command=browse_source).grid(row=0, column=2, padx=10, pady=10)
+
+tk.Label(root, text="Target Directory:").grid(row=1, column=0, padx=10, pady=10)
+tk.Entry(root, textvariable=target_var).grid(row=1, column=1, padx=10, pady=10)
+tk.Button(root, text="Browse", command=browse_target).grid(row=1, column=2, padx=10, pady=10)
+
+tk.Button(root, text="Sort Files", command=sort_files).grid(row=2, column=1, pady=20)
+
+# Suorittaa loopin
+root.mainloop()
