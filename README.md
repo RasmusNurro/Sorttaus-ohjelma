@@ -5,6 +5,8 @@ Scripti minkä avulla saan sortattua tiedostot kansiosta päätteitten perusteel
 Kopioiva_sorttaus ohjelma niin ensin kopioi ne ja siirtää kopioidut tiedostot kansioihin päätteitten perusteella
 Lajitteleva sorttaus siirtää tieedostot kansioihin päätteeitten perusteilla 
 
-- Creditit
+# Creditit
 Rasmus Nurro (Ohjelmoija ja suunnittelija)
 ChatGPT:teetä käytetty avuksi tarpeitten mukaan
+
+# Compilesin tiedostot .exe tiedostoiksi valmiiksi pyinstallerin avulla
